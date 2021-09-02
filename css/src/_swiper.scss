@@ -8,21 +8,19 @@
       width: 100%;
       object-fit: cover;
       max-width: 100%;
-    } /* 画像をレスポンシブに */
+    }
   }
 }
-
-/* 次ページボタンのスタイル */
 
 .swiper-button-next {
   background-image: url(../images/button2.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
-/* 前ページボタンのスタイル */
+
 .swiper-button-prev {
   background-image: url(../images/button2.svg);
-  transform: scale(-1, 1); /* 左右反転 */
+  transform: scale(-1, 1);
 
   background-size: contain;
   background-repeat: no-repeat;

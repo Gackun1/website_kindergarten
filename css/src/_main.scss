@@ -1,19 +1,15 @@
-.kv {
-  width: 100%;
-  min-width: $pc_min_width;
-  max-height: calc(100vh - 14.1rem);
-  overflow: hidden;
-}
-
 .main {
   .inner {
     min-width: $pc_min_width;
   }
   .content {
-    height: 100vh;
-    width: 100%;
-    max-width: 100%;
-    background: #000;
+    width: 120rem;
+    max-width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+    background: transparent;
+    position: relative;
+    z-index: 10;
   }
   .section {
     padding: 15rem 0;
@@ -24,447 +20,26 @@
   }
 }
 
-$side_frame_width: 5rem;
-.frame {
-  position: relative;
+.kv {
   width: 100%;
-  min-width: $pc_min_width;
-  height: fit-content;
-  @media screen and(max-width: $sp_break_point) {
-    &-sp {
-      margin-bottom: 83px;
-    }
-  }
-  &__ {
-    z-index: 1;
+  position: relative;
+  a {
+    display: block;
     position: absolute;
-    top: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  &__kv-bottom {
-    @extend .frame__;
+    width: 25rem;
+    height: 25rem;
+    object-fit: contain;
+    left: 10rem;
     top: 100%;
+    transform: translate(0, -130%);
+    transition: 0.3s;
+    &:hover {
+      transform: translate(0, -130%) scale(1.05) rotate(6deg);
+    }
+  }
+  &__img {
     width: 100%;
-    height: 6rem;
-    transform: translate(0, -100%);
-    background-image: url(../images/frame1.svg);
   }
-  &__kv-left {
-    @extend .frame__;
-    top: 100%;
-    left: 5rem;
-    width: 30rem;
-    height: 30rem;
-    transform: translate(0, -100%);
-    &--box {
-      @extend .frame__kv-left;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background-image: url(../images/box.svg);
-      background-size: cover;
-    }
-    &--cat {
-      @extend .frame__kv-left--box;
-      top: 0;
-      width: 50%;
-      height: 50%;
-      background-image: url(../images/cat.svg);
-      background-size: contain;
-      transform: translate(40%, 13%);
-      animation: jump ease-in-out 10s infinite;
-    }
-  }
-  &__kv-right {
-    @extend .frame__kv-left;
-    top: 0;
-    left: 100%;
-    width: 20rem;
-    height: 100%;
-    transform: translate(-100%, 0);
-    &--dog {
-      @extend .frame__kv-left--box;
-      width: 15rem;
-      height: 15rem;
-      background-image: url(../images/dog.svg);
-      background-size: cover;
-      animation: jump2 ease-in-out 10s infinite;
-      animation-delay: 2s;
-    }
-    &--mouse {
-      @extend .frame__kv-left--box;
-      top: 0;
-      left: 0;
-      width: 13rem;
-      height: 13rem;
-      background-image: url(../images/mouse.svg);
-      background-size: cover;
-      animation: shake3 ease-in-out 10s infinite;
-    }
-  }
-  &__left {
-    @extend .frame__;
-    left: 0;
-    width: $side_frame_width;
-    height: 100%;
-    background-image: url(../images/frame2.svg);
-    background-size: contain;
-    background-repeat: repeat-y;
-  }
-  &__right {
-    @extend .frame__left;
-    left: 100%;
-    transform: translate(-100%, 0);
-    background-image: url(../images/frame2.svg);
-  }
-  &__bottom {
-    font-size: 1vw;
-    @extend .frame__left;
-    width: calc(100% - (#{$side_frame_width} * 2));
-    height: 24.5em;
-    margin: 0 $side_frame_width;
-    top: 100%;
-    transform: translate(0, -100%);
-    background-image: url(../images/frame5.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    &--cat {
-      @extend .frame__kv-left--cat;
-      top: -7em;
-      left: 7em;
-      width: 17em;
-      height: 17em;
-      background-image: url(../images/cat2.svg);
-      animation: jump ease-in-out 10s infinite;
-    }
-    &--dog {
-      @extend .frame__kv-left--cat;
-      top: -0.5em;
-      left: 60.5em;
-      width: 13em;
-      height: 13em;
-      background-image: url(../images/dog2.svg);
-      animation: jump ease-in-out 10s infinite;
-      animation-delay: 2s;
-    }
-    &--mouse {
-      @extend .frame__kv-left--cat;
-      top: -20em;
-      left: 72em;
-      width: 13em;
-      height: 13em;
-      background-image: url(../images/mouse.svg);
-      animation: shake3 ease-in-out 10s infinite;
-    }
-  }
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  padding: 1rem 2rem;
-  border-radius: 100vw;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-family: "MPLUSRounded1c";
-  font-weight: bold;
-  font-size: 1.6rem;
-  color: $color_white;
-  transition: all 0.2s;
-  @media screen and(max-width: $sp_break_point) {
-    padding: 2rem 5rem;
-    font-size: 3.5rem;
-  }
-  &:hover {
-    opacity: 0.5;
-  }
-}
-
-.sidearea .button {
-  width: 100%;
-}
-
-.btn-blue {
-  @extend .button;
-  background-color: $color_blue2;
-  margin: 2rem auto 0 auto;
-}
-.btn-red {
-  @extend .button;
-  background-color: $color_red;
-  margin: 2rem auto 0 auto;
-}
-.btn-orange {
-  @extend .button;
-  background-color: $color_orange;
-  margin: 2rem auto 0 auto;
-}
-.btn-green {
-  @extend .button;
-  background-color: $color_green;
-  margin: 2rem auto 0 auto;
-}
-
-.btn-pink {
-  @extend .button;
-  background-color: $color_pink;
-  margin: 2rem auto 0 auto;
-}
-
-.btn-yellow {
-  @extend .button;
-  background-color: $color_yellow;
-  margin: 2rem auto 0 auto;
-}
-
-.btn-blue {
-  @extend .button;
-  background-color: $color_blue;
-  margin: 2rem auto 0 auto;
-}
-
-.btn-2 {
-  @extend .button;
-  background-color: $color_blue7;
-  margin: 2rem auto 0 auto;
-  padding: 1.3rem 3rem 1.3rem 6rem;
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(40%, -50%);
-    width: 3rem;
-    height: 3rem;
-    background-image: url(../images/button1.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: 0.2s;
-  }
-  &:hover:after {
-    transform: translate(60%, -50%);
-  }
-  @media screen and(max-width:$sp_break_point) {
-    padding: 2.3rem 6rem 2.3rem 13rem;
-    font-size: 5rem;
-    margin-top: 7rem;
-    &:after {
-      width: 7rem;
-      height: 7rem;
-    }
-  }
-}
-
-.btn-large {
-  padding: 2rem 4rem;
-  font-size: 2.5rem;
-}
-
-.btn-disable {
-  cursor: unset;
-  &:hover {
-    opacity: unset;
-  }
-}
-
-.btn-3 {
-  @extend .button;
-  background-color: #f49e26;
-  width: 100%;
-  padding: 1.7rem;
-  border-radius: 1rem;
-  font-size: 3rem;
-}
-
-.btn-4 {
-  @extend .btn-3;
-  background: $color_white;
-  color: #f49e26;
-  border: solid 3px #f49e26;
-}
-
-.ttl {
-  display: block;
-  position: relative;
-  text-align: center;
-  padding: 0;
-  font-weight: bold;
-  font-family: "MPLUSRounded1c";
-}
-
-.ttl-01 {
-  @extend .ttl;
-  font-size: 5rem;
-  color: $color_red;
-}
-.ttl-02 {
-  @extend .ttl;
-  font-size: 3rem;
-  color: $color_blue;
-}
-
-.ttl-03 {
-  @extend .ttl;
-  font-size: 3rem;
-  color: $color_red;
-  position: relative;
-  width: fit-content;
-  background-color: $color_orange2;
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: calc(50% - 5px);
-    transform: translate(calc(-100% - 1rem), 0);
-    width: 16rem;
-    height: 1px;
-    border-bottom: dotted 4px $color_green;
-  }
-  &:before {
-    @extend .ttl-03:after;
-    left: 100%;
-    transform: translate(1rem, 0);
-  }
-}
-
-.ttl-04 {
-  @extend .ttl;
-  font-size: 3rem;
-  color: $color_orange;
-}
-@media screen and(max-width: $sp_break_point) {
-  .ttl-01 {
-    font-size: 8rem;
-  }
-  .ttl-02 {
-    font-size: 5rem;
-  }
-  .news .ttl-03:before {
-    content: unset;
-  }
-  .ttl-03 {
-    font-size: 5rem;
-  }
-  .ttl-04 {
-    font-size: 6rem;
-  }
-}
-
-.ttl-accent-01 {
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
-  &:after,
-  &:before {
-    content: "";
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(-100%, -50%);
-    background-image: url(../images/nav4.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-y: center;
-  }
-  &:before {
-    left: 100%;
-    transform: translate(30%, -50%);
-  }
-}
-
-.ttl-accent-02 {
-  @extend .ttl-accent-01;
-  &:before,
-  &:after {
-    background-image: url(../images/nav7.png);
-  }
-  &:after {
-    transform: translate(-130%, -50%);
-  }
-}
-
-.border-01 {
-  $border_icon_size: 3rem;
-  width: 90%;
-  height: 1px;
-  position: relative;
-  margin: 3rem auto;
-  box-sizing: unset;
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 5px;
-    left: 0;
-    border-bottom: dotted 5px $color_green;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 35px;
-    width: 53px;
-    transform: translate(-50%, -50%);
-    background-image: url(../images/nav3.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-color: $color_orange2;
-  }
-}
-@media screen and(max-width: $sp_break_point) {
-  .border-01 {
-    width: 100%;
-    margin: 5rem 0;
-    &:before {
-      border-bottom: dotted 4px $color_green;
-    }
-    &:after {
-      width: 10rem;
-      height: 5rem;
-    }
-  }
-}
-
-.border-02 {
-  width: calc(100% - #{$side_frame_width} * 2);
-  height: 20px;
-  position: relative;
-  margin: 3rem auto;
-  box-sizing: unset;
-  background-image: url(../images/frame3.svg);
-  background-size: contain;
-  background-repeat: repeat-x;
-}
-
-.border-03 {
-  @extend .border-02;
-  height: 10rem;
-  background-image: url(../images/frame4.svg);
-}
-
-.border-04 {
-  @extend .border-01;
-  &:after {
-    background-image: url(../images/nav5.png);
-  }
-  width: 60rem;
-  @media screen and(max-width: $sp_break_point) {
-    margin: 5rem auto;
-  }
-}
-
-.border-05 {
-  border-bottom: dotted 4px #039b58;
 }
 
 .about {
@@ -476,90 +51,135 @@ $side_frame_width: 5rem;
   @media screen and(max-width: $sp_break_point) {
     width: 80rem;
   }
-}
-.about-bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  transform: translate(-50%, 0);
-  &__item1 {
+  &-bg {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 30rem;
-    left: 20rem;
-    width: 15rem;
-    height: 15rem;
-    object-fit: cover;
-    animation: shake ease-in-out 30s infinite;
-    @media screen and(max-width: $sp_break_point) {
-      top: 108rem;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, 0);
+    &__item1 {
+      position: absolute;
+      top: 30rem;
+      left: 20rem;
+      width: 15rem;
+      height: 15rem;
+      object-fit: cover;
+      animation: shake ease-in-out 30s infinite;
+      @media screen and(max-width: $sp_break_point) {
+        top: 108rem;
+      }
+    }
+    &__item2 {
+      @extend .about-bg__item1;
+      left: 8rem;
+      top: 45rem;
+      width: 10rem;
+      height: 10rem;
+      animation-delay: 1s;
+      @media screen and(max-width: $sp_break_point) {
+        left: 13rem;
+        top: 125rem;
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+    &__item3 {
+      @extend .about-bg__item1;
+      left: 5rem;
+      top: -5rem;
+      width: 25rem;
+      height: 25rem;
+      object-fit: contain;
+      animation: shake2 ease-in-out 15s infinite;
+      @media screen and(max-width: $sp_break_point) {
+        left: 1rem;
+        top: 1rem;
+      }
+    }
+    &__item4 {
+      @extend .about-bg__item1;
+      left: calc(100% - 50rem);
+      top: 50rem;
+      animation-delay: 0s;
+      @media screen and(max-width: $sp_break_point) {
+        top: 29rem;
+        left: 79rem;
+        width: 9rem;
+        height: 9rem;
+      }
+    }
+    &__item5 {
+      @extend .about-bg__item1;
+      left: calc(100% - 30rem);
+      top: 50rem;
+      width: 7rem;
+      height: 7rem;
+      animation-delay: 1s;
+      @media screen and(max-width: $sp_break_point) {
+        left: 89rem;
+        top: 19rem;
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+    &__item6 {
+      @extend .about-bg__item1;
+      left: unset;
+      right: 0;
+      top: -5rem;
+      width: 15rem;
+      height: 35rem;
+      object-fit: contain;
+      animation: none;
+      @media screen and(max-width: $sp_break_point) {
+        top: 32rem;
+      }
     }
   }
-  &__item2 {
-    @extend .about-bg__item1;
-    left: 8rem;
-    top: 45rem;
-    width: 10rem;
-    height: 10rem;
-    animation-delay: 1s;
-    @media screen and(max-width: $sp_break_point) {
-      left: 13rem;
-      top: 125rem;
-      width: 6rem;
-      height: 6rem;
+
+  &__left {
+    flex-basis: 40%;
+  }
+  &__right {
+    flex-basis: 60%;
+    margin: 3rem 0 0 5rem;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 0;
+      transform: translate(-100%, -70%);
+      width: 20rem;
+      height: 20rem;
+      background-image: url(../images/01.png);
+      background-size: contain;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 100%;
+      transform: translate(-20%, -10%);
+      width: 20rem;
+      height: 20rem;
+      background-image: url(../images/15.png);
+      background-size: contain;
     }
   }
-  &__item3 {
-    @extend .about-bg__item1;
-    left: 5rem;
-    top: -5rem;
-    width: 25rem;
-    height: 25rem;
-    object-fit: contain;
-    animation: shake2 ease-in-out 15s infinite;
-    @media screen and(max-width: $sp_break_point) {
-      left: 1rem;
-      top: 1rem;
+  @media screen and(max-width: $sp_break_point) {
+    .flex {
+      flex-direction: column;
     }
-  }
-  &__item4 {
-    @extend .about-bg__item1;
-    left: calc(100% - 50rem);
-    top: 50rem;
-    animation-delay: 0s;
-    @media screen and(max-width: $sp_break_point) {
-      top: 29rem;
-      left: 79rem;
-      width: 9rem;
-      height: 9rem;
-    }
-  }
-  &__item5 {
-    @extend .about-bg__item1;
-    left: calc(100% - 30rem);
-    top: 50rem;
-    width: 7rem;
-    height: 7rem;
-    animation-delay: 1s;
-    @media screen and(max-width: $sp_break_point) {
-      left: 89rem;
-      top: 19rem;
-      width: 5rem;
-      height: 5rem;
-    }
-  }
-  &__item6 {
-    @extend .about-bg__item1;
-    left: unset;
-    right: 0;
-    top: -5rem;
-    width: 15rem;
-    height: 35rem;
-    object-fit: contain;
-    animation: none;
-    @media screen and(max-width: $sp_break_point) {
-      top: 32rem;
+    &__right {
+      margin: 11rem 0;
+      &:before {
+        transform: translate(-20%, -50%);
+      }
     }
   }
 }
@@ -663,143 +283,13 @@ $side_frame_width: 5rem;
         top: -5rem;
       }
     }
-  }
-}
-
-/*水族館サイト */
-
-.kv {
-  position: relative;
-  a {
-    display: block;
-    position: absolute;
-    width: 25rem;
-    height: 25rem;
-    object-fit: contain;
-    left: 10rem;
-    top: 100%;
-    transform: translate(0, -130%);
-    transition: 0.3s;
-    &:hover {
-      transform: translate(0, -130%) scale(1.05) rotate(6deg);
-    }
-  }
-  &__img {
-    width: 100%;
-  }
-}
-
-p {
-  line-height: 175%;
-}
-.wave1 {
-  position: absolute;
-  margin: -2px 0 0 0;
-  transform: scale(1, -1);
-}
-
-.wave2 {
-  @extend .wave1;
-  transform: translate(0, calc(-100% + 3px));
-  z-index: 1;
-}
-
-.flex {
-  display: flex;
-}
-.ttl-05 {
-  @extend .ttl;
-  width: 25rem;
-  height: 15rem;
-  background-image: url(../images/shell1.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  letter-spacing: 0.15rem;
-  white-space: nowrap;
-  span {
-    font-size: 2.5rem;
-    color: $color_white;
-  }
-  @media screen and(max-width: $sp_break_point) {
-    width: 40rem;
-    height: 24rem;
-    span {
-      font-size: 4.8rem;
-    }
-  }
-}
-
-.ttl-06 {
-  @extend .ttl;
-  font-size: 3rem;
-  text-align: left;
-  color: $color_blue11;
-  letter-spacing: 0.2rem;
-  @media screen and(max-width: $sp_break_point) {
-    font-size: 6rem;
-  }
-}
-
-.about.content,
-.news.content,
-.life.content,
-.educate.content,
-.product.content {
-  width: 120rem;
-  max-width: 90%;
-  height: fit-content;
-  margin: 0 auto;
-  background: transparent;
-  position: relative;
-  z-index: 10;
-}
-.about {
-  &__left {
-    flex-basis: 40%;
-  }
-  &__right {
-    flex-basis: 60%;
-    margin: 3rem 0 0 5rem;
-    position: relative;
-    img {
-      width: 100%;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      left: 100%;
-      top: 0;
-      transform: translate(-100%, -70%);
-      width: 20rem;
-      height: 20rem;
-      background-image: url(../images/01.png);
-      background-size: contain;
-    }
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 100%;
-      transform: translate(-20%, -10%);
-      width: 20rem;
-      height: 20rem;
-      background-image: url(../images/15.png);
-      background-size: contain;
-    }
-  }
-  @media screen and(max-width: $sp_break_point) {
-    .flex {
-      flex-direction: column;
-    }
-    &__right {
-      margin: 11rem 0;
-      &:before {
-        transform: translate(-20%, -50%);
-      }
+    &__item11 {
+      @extend .news-bg__item1;
+      bottom: 5rem;
+      left: calc(100% - 18rem);
+      width: 5rem;
+      height: 5rem;
+      animation-delay: 2s;
     }
   }
 }
@@ -933,147 +423,72 @@ p {
       padding: 5rem;
     }
   }
-}
-
-.topics-deco {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  &__item1 {
+  &-deco {
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: -13rem;
-    right: -9rem;
-    width: 18rem;
-    animation: shake5 ease-in-out 15s infinite;
-  }
-  &__item2 {
-    position: absolute;
-    top: 11rem;
-    right: -11rem;
-    width: 10rem;
-    animation: shake5 ease-in-out 15s infinite;
-    animation-delay: 1s;
-  }
-  &__item3 {
-    position: absolute;
-    top: 0rem;
-    right: -14rem;
-    width: 10rem;
-    animation: shake5 ease-in-out 15s infinite;
-    animation-delay: 0.5s;
-  }
-  &__item4 {
-    position: absolute;
-    bottom: -4rem;
-    right: -4rem;
-    width: 17rem;
-    animation: rotation1 ease-in-out 15s infinite;
-  }
-  &__item5 {
-    position: absolute;
-    bottom: -7rem;
-    left: -3rem;
-    width: 17rem;
-    animation: shake4 ease-in-out 15s infinite;
-  }
-  &__item6 {
-    position: absolute;
-    bottom: 2rem;
-    left: -9rem;
-    width: 9rem;
-    animation: shake4 ease-in-out 15s infinite;
-    animation-delay: 1s;
-  }
-  @media screen and(max-width: $sp_break_point) {
-    &__item3 {
-      right: -10rem;
+    top: 0;
+    &__item1 {
+      position: absolute;
+      top: -13rem;
+      right: -9rem;
+      width: 18rem;
+      animation: shake5 ease-in-out 15s infinite;
     }
     &__item2 {
-      right: -7rem;
+      position: absolute;
+      top: 11rem;
+      right: -11rem;
+      width: 10rem;
+      animation: shake5 ease-in-out 15s infinite;
+      animation-delay: 1s;
     }
-    &__item1 {
-      right: -5rem;
+    &__item3 {
+      position: absolute;
+      top: 0rem;
+      right: -14rem;
+      width: 10rem;
+      animation: shake5 ease-in-out 15s infinite;
+      animation-delay: 0.5s;
     }
-  }
-}
-
-.leaf1 {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  z-index: 1;
-  transform: translate(0, -50%);
-  overflow-x: hidden;
-  &__left {
-    width: 30rem;
-    height: 37rem;
-    object-fit: contain;
-  }
-  &__right {
-    width: 23rem;
-    height: 30rem;
-    object-fit: contain;
-  }
-  &__fish {
-    position: absolute;
-    left: 0;
-    bottom: 5rem;
-    width: 30rem;
-    animation: shake4 ease-in-out 15s infinite;
-  }
-}
-
-.leaf2 {
-  @extend .leaf1;
-  &__left {
-    width: 15rem;
-  }
-  &__right {
-    width: 15rem;
-  }
-}
-
-.leaf3 {
-  @extend .leaf1;
-  transform: translate(0, -10%);
-  z-index: 2;
-  &__left {
-    width: 20rem;
-  }
-  &__right {
-    width: 20rem;
-  }
-}
-
-.leaf4 {
-  @extend .leaf1;
-  z-index: 0;
-  transform: translate(0, -100%);
-  &__left {
-    width: 20rem;
-    margin: 0 0 0 10rem;
-  }
-  &__right {
-    width: 20rem;
-    margin: 0 10rem 0 0;
-  }
-}
-
-.leaf5 {
-  @extend .leaf1;
-  transform: translate(0, -80%);
-  &__left {
-    width: 20rem;
-  }
-  &__right {
-    width: 20rem;
+    &__item4 {
+      position: absolute;
+      bottom: -4rem;
+      right: -4rem;
+      width: 17rem;
+      animation: rotation1 ease-in-out 15s infinite;
+    }
+    &__item5 {
+      position: absolute;
+      bottom: -7rem;
+      left: -3rem;
+      width: 17rem;
+      animation: shake4 ease-in-out 15s infinite;
+    }
+    &__item6 {
+      position: absolute;
+      bottom: 2rem;
+      left: -9rem;
+      width: 9rem;
+      animation: shake4 ease-in-out 15s infinite;
+      animation-delay: 1s;
+    }
+    @media screen and(max-width: $sp_break_point) {
+      &__item3 {
+        right: -10rem;
+      }
+      &__item2 {
+        right: -7rem;
+      }
+      &__item1 {
+        right: -5rem;
+      }
+    }
   }
 }
 
 .life {
-  .ttl-05 {
+  .ttl-01 {
     background-image: url(../images/shell2.svg);
   }
   &__left {
@@ -1142,62 +557,59 @@ p {
       }
     }
   }
+  &-deco {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    &__item1 {
+      position: absolute;
+      left: -5rem;
+      top: -2rem;
+      height: 15rem;
+      width: 15rem;
+      animation: shake4 ease-in-out 15s infinite;
+    }
+    &__item2 {
+      position: absolute;
+      left: 6rem;
+      top: -6rem;
+      height: 8rem;
+      width: 8rem;
+      animation: shake4 ease-in-out 15s infinite;
+      animation-delay: 1s;
+    }
+    &-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      &__item6 {
+        top: -13rem;
+        right: 28rem;
+        left: unset;
+      }
+      &__item7 {
+        top: -19rem;
+        right: 25rem;
+        left: unset;
+        width: 5rem;
+        height: 5rem;
+      }
+      &__item11 {
+        position: absolute;
+        top: -27rem;
+        right: 31rem;
+        left: unset;
+        width: 4rem;
+        height: 4rem;
+        animation: shake ease-in-out 30s infinite;
+        animation-delay: 2s;
+      }
+    }
+  }
 }
 
-.life-deco {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  &__item1 {
-    position: absolute;
-    left: -5rem;
-    top: -2rem;
-    height: 15rem;
-    width: 15rem;
-    animation: shake4 ease-in-out 15s infinite;
-  }
-  &__item2 {
-    position: absolute;
-    left: 6rem;
-    top: -6rem;
-    height: 8rem;
-    width: 8rem;
-    animation: shake4 ease-in-out 15s infinite;
-    animation-delay: 1s;
-  }
-}
-
-.life-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  &__item6 {
-    top: -13rem;
-    right: 28rem;
-    left: unset;
-  }
-  &__item7 {
-    top: -19rem;
-    right: 25rem;
-    left: unset;
-    width: 5rem;
-    height: 5rem;
-  }
-  &__item11 {
-    position: absolute;
-    top: -27rem;
-    right: 31rem;
-    left: unset;
-    width: 4rem;
-    height: 4rem;
-    animation: shake ease-in-out 30s infinite;
-    animation-delay: 2s;
-  }
-}
-
-//ギャラリー
 .gallery {
   width: 100%;
   max-width: 60rem;
@@ -1209,16 +621,14 @@ p {
     border-radius: 15px;
     overflow: hidden;
   }
-  //メイン
+
   &-slider {
     width: 100%;
     height: auto;
     margin: 0 0 1rem 0;
-
     .swiper-slide {
       width: auto;
       height: 30rem;
-
       img {
         display: block;
         width: auto;
@@ -1228,12 +638,10 @@ p {
     }
   }
 
-  //サムネイル
   &-thumbs {
     width: 100%;
     padding: 0;
     overflow: hidden;
-
     .swiper-slide {
       width: 15rem;
       height: 15rem;
@@ -1243,7 +651,6 @@ p {
       &-active {
         opacity: 1;
       }
-
       img {
         width: auto;
         height: 100%;
@@ -1261,7 +668,7 @@ p {
 }
 
 .educate {
-  .ttl-05 {
+  .ttl-01 {
     background-image: url(../images/shell3.svg);
     span {
       color: $color_blue8;
@@ -1325,32 +732,31 @@ p {
       margin: 5rem 0;
     }
   }
-}
-
-.educate-bg {
-  &__item2 {
-    top: unset;
-    bottom: -25rem;
-  }
-  &__item3 {
-    top: unset;
-    bottom: -15rem;
-  }
-  &__item4 {
-    top: unset;
-    bottom: -9rem;
-  }
-  &__item5 {
-    width: 8rem;
-    height: 8rem;
-  }
-  &__item6 {
-    width: 8rem;
-    height: 8rem;
-  }
-  &__item8 {
-    width: 7rem;
-    height: 7rem;
+  &-bg {
+    &__item2 {
+      top: unset;
+      bottom: -25rem;
+    }
+    &__item3 {
+      top: unset;
+      bottom: -15rem;
+    }
+    &__item4 {
+      top: unset;
+      bottom: -9rem;
+    }
+    &__item5 {
+      width: 8rem;
+      height: 8rem;
+    }
+    &__item6 {
+      width: 8rem;
+      height: 8rem;
+    }
+    &__item8 {
+      width: 7rem;
+      height: 7rem;
+    }
   }
 }
 
@@ -1359,7 +765,7 @@ p {
   padding-bottom: 20rem;
   position: relative;
   z-index: 2;
-  .ttl-05 {
+  .ttl-01 {
     background-image: url(../images/shell3.svg);
     span {
       color: $color_blue8;
@@ -1440,33 +846,33 @@ p {
       font-size: 5.5rem;
     }
   }
-}
-.conversion-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  &__item1 {
+  &-bg {
     position: absolute;
-    left: 15rem;
-    top: 0;
-    animation: rotation1 ease-in-out 17s infinite;
-  }
-  &__item2 {
-    position: absolute;
-    right: 15rem;
-    top: 0;
-    animation: rotation1 ease-in-out 12s infinite;
-  }
-  @media screen and(max-width:$sp_break_point) {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     &__item1 {
-      width: 21rem;
-      left: 6rem;
+      position: absolute;
+      left: 15rem;
+      top: 0;
+      animation: rotation1 ease-in-out 17s infinite;
     }
     &__item2 {
-      right: 5rem;
-      top: -2rem;
-      width: 25rem;
+      position: absolute;
+      right: 15rem;
+      top: 0;
+      animation: rotation1 ease-in-out 12s infinite;
+    }
+    @media screen and(max-width:$sp_break_point) {
+      &__item1 {
+        width: 21rem;
+        left: 6rem;
+      }
+      &__item2 {
+        right: 5rem;
+        top: -2rem;
+        width: 25rem;
+      }
     }
   }
 }
