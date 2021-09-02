@@ -1,0 +1,39 @@
+.sidearea {
+  position: absolute;
+  z-index: 100;
+  width: 17rem;
+  top: 50%;
+  right: 7rem;
+  transform: translate(0, -50%);
+  &-list {
+    &__item {
+      & + & {
+        margin-top: 3rem;
+      }
+    }
+  }
+  @media screen and(max-width: $iphone_x_break_point) {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 100%;
+    transform: translate(0, -100%);
+    background-color: $color_white;
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      &__item {
+        width: 50%;
+        a {
+          margin: 0;
+          border-radius: unset;
+          padding: 3rem 0;
+        }
+        & + & {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

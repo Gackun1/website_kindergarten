@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header" id="top">
+      <div class="inner">
+        <h1>
+          <a href="index.html" class="header__sp-logo"><img src="./images/logo.svg" alt="学校法人 日本教育財団 ハル幼稚園" /></a>
+        </h1>
+        <nav>
+          <ul class="header-nav">
+            <li class="header-nav__item">
+              <a href="index.html" class="js-smooth-scroll"><img src="./images/nav-icon1.svg" alt="" /><span class="header-nav__text">ホーム</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#i-1" class="js-smooth-scroll"><img src="./images/nav-icon2.svg" alt="" /><span class="header-nav__text">園について</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#i-2" class="js-smooth-scroll"><img src="./images/nav-icon3.svg" alt="" /><span class="header-nav__text">お知らせ</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="" class="js-smooth-scroll"><img src="./images/nav-icon4.svg" alt="" /><span class="header-nav__text">今日の幼稚園</span></a>
+            </li>
+            <li class="header-nav__item header-nav__item--logo">
+              <h1>
+                <a href="index.html"><img src="./images/logo.svg" alt="学校法人 日本教育財団 ハル幼稚園" /></a>
+              </h1>
+            </li>
+            <li class="header-nav__item">
+              <a href="#i-2" class="js-smooth-scroll"><img src="./images/nav-icon5.svg" alt="" /><span class="header-nav__text">ニュース</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#i-3" class="js-smooth-scroll"><img src="./images/nav-icon6.svg" alt="" /><span class="header-nav__text">園の生活</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#i-4"><img src="./images/nav-icon7.svg" alt="" /><span class="header-nav__text">園の教育</span></a>
+            </li>
+            <li class="header-nav__item">
+              <a href="" class="js-smooth-scroll"><img src="./images/nav-icon8.svg" alt="" /><span class="header-nav__text">展覧会作品</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <svg class="wave wave1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 50" enable-background="new 0 0 1000 50" xml:space="preserve">
+      <path fill="#EAFFFF">
+        <animate
+          dur="15s"
+          repeatCount="indefinite"
+          attributeName="d"
+          attributeType="XML"
+          values="M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,23.8c-55.6,14.7-115.5,18.5-169,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-18.9-134-25.7c-41.6-5.9-67.6,27.3-108.5,27.1c-39.2-0.1-51.4-17.1-102.7-17.1c-60.2,0-83.3,27.5-126.7,14.4C1112.8,13.9,1090,1.6,1041,15.9c-50.6,14.8-106,6.9-155.1-7c-93.8-26.5-153,18-244.5,19.9C562,30.4,479-7.4,396.9,13c-86.5,21.5-137,29.2-225.1,5.4C106.3,0.7,58.7-12.7,0.5,23.8v29h1920V23.8z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;"
+        ></animate>
+      </path>
+    </svg>
+
+    <div class="kv">
+      <div class="slider">
+        <!-- swiper -->
+        <div class="swiper-container" id="slider1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/main1.png" alt="" /></div>
+            <div class="swiper-slide"><img src="./images/main2.png" alt="" /></div>
+            <div class="swiper-slide"><img src="./images/main3.png" alt="" /></div>
+            <div class="swiper-slide"><img src="./images/main4.png" alt="" /></div>
+          </div>
+        </div>
+        <!-- end of swiper -->
+      </div>
+      <a href=""><img src="images/bunner.svg" alt="" class="kv__img" /></a>
+    </div>
+
+    <main class="main">
+      <div class="inner">
+        <section class="section">
+          <div class="about-bg">
+            <img src="./images/circle1.svg" alt="" class="about-bg__item1" />
+            <img src="./images/circle1.svg" alt="" class="about-bg__item2" />
+            <img src="./images/fish10.svg" alt="" class="about-bg__item3" />
+            <img src="./images/circle1.svg" alt="" class="about-bg__item4" />
+            <img src="./images/circle1.svg" alt="" class="about-bg__item5" />
+            <img src="./images/img3.svg" alt="" class="about-bg__item6" />
+          </div>
+          <div class="content about">
+            <h2 id="i-1" class="ttl-05"><span>幼稚園について</span></h2>
+            <div class="flex mt-80">
+              <div class="about__left">
+                <h3 class="ttl-06 mb-20">子どもたちにも<br />大人気待望の<br />新園舎が完成しました!</h3>
+                <p>新園舎は広くてすてき!!<br />子供達も毎日、きれいな設備で快適に過ごしています。 中庭からの明るい陽射し、子供達はちょっとした時間にも、中庭の遊具で上靴のまま遊べるので楽しそうです。</p>
+                <p>また、参観や音楽会、おゆうぎ会、展覧会など、幼稚園での行事は人数制限一切なしで行えるようになりました。 子供達の生き生きと楽しんでいる様子をたくさんの方にご覧いただきたいと思います!!</p>
+              </div>
+              <div class="about__right"><img src="./images/17.png" alt="" /></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="leaf1">
+          <img src="images/fish2.svg" alt="" class="leaf1__fish" />
+          <img src="images/img1.svg" alt="" class="leaf1__left" />
+          <img src="images/img2.svg" alt="" class="leaf1__right" />
+        </div>
+        <svg class="wave wave1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 50" enable-background="new 0 0 1000 50" xml:space="preserve">
+          <path fill="#EAFFFF">
+            <animate
+              dur="15s"
+              repeatCount="indefinite"
+              attributeName="d"
+              attributeType="XML"
+              values="M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,23.8c-55.6,14.7-115.5,18.5-169,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-18.9-134-25.7c-41.6-5.9-67.6,27.3-108.5,27.1c-39.2-0.1-51.4-17.1-102.7-17.1c-60.2,0-83.3,27.5-126.7,14.4C1112.8,13.9,1090,1.6,1041,15.9c-50.6,14.8-106,6.9-155.1-7c-93.8-26.5-153,18-244.5,19.9C562,30.4,479-7.4,396.9,13c-86.5,21.5-137,29.2-225.1,5.4C106.3,0.7,58.7-12.7,0.5,23.8v29h1920V23.8z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;"
+            ></animate>
+          </path>
+        </svg>
+
+        <section class="section bg-blue1">
+          <div class="news-bg">
+            <img src="./images/circle4.svg" alt="" class="news-bg__item1" />
+            <img src="./images/circle4.svg" alt="" class="news-bg__item2" />
+            <img src="./images/circle4.svg" alt="" class="news-bg__item3" />
+            <img src="./images/circle4.svg" alt="" class="news-bg__item4" />
+            <img src="./images/circle4.svg" alt="" class="news-bg__item5" />
+            <img src="./images/circle4.svg" alt="" class="news-bg__item6" />
+            <img src="./images/circle4.svg" alt="" class="news-bg__item7" />
+            <img src="./images/circle4.svg" alt="" class="news-bg__item8" />
+            <img src="./images/circle4.svg" alt="" class="news-bg__item9" />
+            <img src="./images/circle4.svg" alt="" class="news-bg__item10" />
+          </div>
+          <div class="content news">
+            <h2 class="ttl-05" id="i-2"><span>新園舎ニュース</span></h2>
+            <div class="topics mt-80">
+              <div class="topics__inner">
+                <h3 class="topics__ttl">TOPICS</h3>
+                <ul class="topics__list">
+                  <li class="topics__item">
+                    <a href="">
+                      <div class="flex">
+                        <div class="topics__box1">
+                          <img src="images/21.jpg" alt="" class="topics__img" />
+                        </div>
+                        <div class="topics__box2">
+                          <p class="topics__date">2021.7.8</p>
+                          <h4 class="topics__ttl2">新園舎見学会</h4>
+                          <p class="topics__txt">新園舎完成を記念して見学会を開催します！<br />ご予約はお電話にて...</p>
+                        </div>
+                      </div>
+                      <div class="topics__box3">詳しくはこちら »</div>
+                    </a>
+                  </li>
+                  <li class="topics__item">
+                    <a href="">
+                      <div class="flex">
+                        <div class="topics__box1">
+                          <img src="images/17.jpg" alt="" class="topics__img" />
+                        </div>
+                        <div class="topics__box2">
+                          <p class="topics__date">2021.7.1</p>
+                          <h4 class="topics__ttl2">新園舎完成！</h4>
+                          <p class="topics__txt">ついに新園舎が完成しました！皆様にはご協力を頂きましたこと、心より感謝申し上げます...</p>
+                        </div>
+                      </div>
+                      <div class="topics__box3">詳しくはこちら »</div>
+                    </a>
+                  </li>
+                  <li class="topics__item">
+                    <a href="">
+                      <div class="flex">
+                        <div class="topics__box1">
+                          <img src="images/logo2.png" alt="" class="topics__img" />
+                        </div>
+                        <div class="topics__box2">
+                          <p class="topics__date">2021.6.1</p>
+                          <h4 class="topics__ttl2">工事のお知らせ</h4>
+                          <p class="topics__txt">6月25日(金), 26(土), 27(日)に改装工事を行います。皆様にはご迷惑おかけしますが...</p>
+                        </div>
+                      </div>
+                      <div class="topics__box3">詳しくはこちら »</div>
+                    </a>
+                  </li>
+                </ul>
+                <button class="btn-2">一覧はこちら</button>
+              </div>
+              <div class="topics-deco">
+                <img src="images/fish7.svg" alt="" class="topics-deco__item1" />
+                <img src="images/fish7.svg" alt="" class="topics-deco__item2" />
+                <img src="images/fish6.svg" alt="" class="topics-deco__item3" />
+                <img src="images/human3.svg" alt="" class="topics-deco__item4" />
+                <img src="images/fish3.svg" alt="" class="topics-deco__item5" />
+                <img src="images/fish3.svg" alt="" class="topics-deco__item6" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="leaf2">
+          <img src="images/img4.svg" alt="" class="leaf2__left" />
+          <img src="images/img5.svg" alt="" class="leaf2__right" />
+        </div>
+        <svg class="wave wave1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 50" enable-background="new 0 0 1000 50" xml:space="preserve">
+          <path fill="#cdf5fc">
+            <animate
+              dur="15s"
+              repeatCount="indefinite"
+              attributeName="d"
+              attributeType="XML"
+              values="M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,23.8c-55.6,14.7-115.5,18.5-169,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-18.9-134-25.7c-41.6-5.9-67.6,27.3-108.5,27.1c-39.2-0.1-51.4-17.1-102.7-17.1c-60.2,0-83.3,27.5-126.7,14.4C1112.8,13.9,1090,1.6,1041,15.9c-50.6,14.8-106,6.9-155.1-7c-93.8-26.5-153,18-244.5,19.9C562,30.4,479-7.4,396.9,13c-86.5,21.5-137,29.2-225.1,5.4C106.3,0.7,58.7-12.7,0.5,23.8v29h1920V23.8z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;"
+            ></animate>
+          </path>
+        </svg>
+
+        <section class="section bg-blue2">
+          <div class="life-bg">
+            <img src="./images/circle1.svg" alt="" class="life-bg__item1" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item2" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item3" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item4" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item5" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item6" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item7" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item8" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item9" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item10" />
+            <img src="./images/circle1.svg" alt="" class="life-bg__item11" />
+          </div>
+
+          <div class="content life">
+            <h2 class="ttl-05" id="i-3"><span>幼稚園での生活</span></h2>
+            <div class="flex mt-60">
+              <div class="life__left">
+                <div class="gallery">
+                  <div class="swiper-container gallery-slider">
+                    <!-- メイン -->
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="images/24.jpg" alt="" /></div>
+                      <div class="swiper-slide"><img src="images/12.jpg" alt="" /></div>
+                      <div class="swiper-slide"><img src="images/06.jpg" alt="" /></div>
+                      <div class="swiper-slide"><img src="images/main4.png" alt="" /></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                  <!-- サムネイル -->
+                  <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="images/24.jpg" alt="" /></div>
+                      <div class="swiper-slide"><img src="images/12.jpg" alt="" /></div>
+                      <div class="swiper-slide"><img src="images/06.jpg" alt="" /></div>
+                      <div class="swiper-slide"><img src="images/main4.png" alt="" /></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="life-deco">
+                  <img src="images/fish4.svg" alt="" class="life-deco__item1" />
+                  <img src="images/fish5.svg" alt="" class="life-deco__item2" />
+                </div>
+              </div>
+              <div class="life__right">
+                <h3 class="life__ttl"><span>ハル幼稚園といえば</span><br />『SIあそび』</h3>
+                <p class="life__txt">
+                  お子様一人ひとりが、自ら考え、気づき、創意工夫する力、思考する力を養うこと(知能教育)を目的として、別教材を使用しています。<br />お話をよく聞き、集中してお勉強というのがハル幼稚園の最大の特徴です。しからないでほめて、みんなニコニコ。
+                  『叱らない教育方法』は、20年以上の研究の成果です「。どろんこ遊び」から「英才教育」までがハル幼稚園の教育方針です。
+                </p>
+                <p class="life__txt caption">
+                  ※SIあそびとは<br />南カリフォルニア大学名誉教授、J・Pギルフォード博士の知能構造（SI）論に基づく、遊びながら知能を高める英才教育で、数や言葉、記憶力、判断力、情緒、あらゆる能力を飛躍的に高めます。
+                </p>
+                <button class="btn-2">一覧はこちら</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="leaf3">
+          <img src="images/img7.svg" alt="" class="leaf3__left" />
+          <img src="images/img6.svg" alt="" class="leaf3__right" />
+        </div>
+        <svg class="wave wave1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 50" enable-background="new 0 0 1000 50" xml:space="preserve">
+          <path fill="#9ae3f0">
+            <animate
+              dur="15s"
+              repeatCount="indefinite"
+              attributeName="d"
+              attributeType="XML"
+              values="M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,23.8c-55.6,14.7-115.5,18.5-169,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-18.9-134-25.7c-41.6-5.9-67.6,27.3-108.5,27.1c-39.2-0.1-51.4-17.1-102.7-17.1c-60.2,0-83.3,27.5-126.7,14.4C1112.8,13.9,1090,1.6,1041,15.9c-50.6,14.8-106,6.9-155.1-7c-93.8-26.5-153,18-244.5,19.9C562,30.4,479-7.4,396.9,13c-86.5,21.5-137,29.2-225.1,5.4C106.3,0.7,58.7-12.7,0.5,23.8v29h1920V23.8z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;"
+            ></animate>
+          </path>
+        </svg>
+
+        <section class="section bg-blue3">
+          <div class="educate-bg">
+            <img src="./images/circle2.svg" alt="" class="educate-bg__item1" />
+            <img src="./images/circle3.svg" alt="" class="educate-bg__item2" />
+            <img src="./images/circle3.svg" alt="" class="educate-bg__item3" />
+            <img src="./images/circle3.svg" alt="" class="educate-bg__item4" />
+            <img src="./images/circle2.svg" alt="" class="educate-bg__item5" />
+            <img src="./images/circle2.svg" alt="" class="educate-bg__item8" />
+            <img src="./images/circle2.svg" alt="" class="educate-bg__item9" />
+            <img src="./images/circle2.svg" alt="" class="educate-bg__item10" />
+          </div>
+          <div class="content educate">
+            <h2 class="ttl-05" id="i-4"><span>幼稚園の教育</span></h2>
+            <div class="mt-60">
+              <ul class="educate__list">
+                <li class="educate__item">
+                  <a href="">
+                    <div class="educate__imgbox">
+                      <img src="images/22.png" alt="" class="educate__img" />
+                    </div>
+                    <h3 class="educate__ttl">3才から特別講師による指導!</h3>
+                    <button class="btn-2">詳しくはこちら</button>
+                  </a>
+                </li>
+                <li class="educate__item">
+                  <a href="">
+                    <div class="educate__imgbox">
+                      <img src="images/11.png" alt="" class="educate__img" />
+                    </div>
+                    <h3 class="educate__ttl">あずかり保育や時間外保育</h3>
+                    <button class="btn-2">詳しくはこちら</button>
+                  </a>
+                </li>
+                <li class="educate__item">
+                  <a href="">
+                    <div class="educate__imgbox">
+                      <img src="images/05.png" alt="" class="educate__img" />
+                    </div>
+                    <h3 class="educate__ttl">塾も開講しています</h3>
+                    <button class="btn-2">詳しくはこちら</button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <svg class="wave wave1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 50" enable-background="new 0 0 1000 50" xml:space="preserve">
+          <path fill="#53bef0">
+            <animate
+              dur="15s"
+              repeatCount="indefinite"
+              attributeName="d"
+              attributeType="XML"
+              values="M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,23.8c-55.6,14.7-115.5,18.5-169,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-18.9-134-25.7c-41.6-5.9-67.6,27.3-108.5,27.1c-39.2-0.1-51.4-17.1-102.7-17.1c-60.2,0-83.3,27.5-126.7,14.4C1112.8,13.9,1090,1.6,1041,15.9c-50.6,14.8-106,6.9-155.1-7c-93.8-26.5-153,18-244.5,19.9C562,30.4,479-7.4,396.9,13c-86.5,21.5-137,29.2-225.1,5.4C106.3,0.7,58.7-12.7,0.5,23.8v29h1920V23.8z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;"
+            ></animate>
+          </path>
+        </svg>
+
+        <section class="section bg-blue4">
+          <div class="conversion-bg">
+            <img src="images/human2.svg" alt="" class="conversion-bg__item1" />
+            <img src="images/human1.svg" alt="" class="conversion-bg__item2" />
+          </div>
+          <div class="content conversion">
+            <h2 class="ttl-05"><span>お問い合わせ</span></h2>
+            <div class="topics mt-80">
+              <div class="topics__inner">
+                <h3 class="topics__ttl">お問合せ・資料請求はこちら！</h3>
+                <ul class="conversion__list">
+                  <li class="conversion__item"><button class="btn-3">TEL：03-3344-1010</button></li>
+                  <li class="conversion__item"><button class="btn-4">ホームページでご請求</button></li>
+                </ul>
+                <ul class="conversion__list">
+                  <li class="conversion__item">
+                    <h3 class="topics__ttl2">送迎バスもご用意しております!</h3>
+                    <p class="topics__txt2">送迎バスは１８＋６コース、停留所は２２０箇所。<br />「自宅のすぐ側まで」を基本に、毎年見直ししています。</p>
+                  </li>
+                  <li class="conversion__item"><button class="btn-2">詳しくはこちら</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <a href="#top" class="to-top hidden js-smooth-scroll"><img src="images/totop1.svg" alt="" /></a>
+
+    <svg class="wave wave2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 50" enable-background="new 0 0 1000 50" xml:space="preserve">
+      <path fill="#1078a8">
+        <animate
+          dur="15s"
+          repeatCount="indefinite"
+          attributeName="d"
+          attributeType="XML"
+          values="M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,23.8c-55.6,14.7-115.5,18.5-169,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-18.9-134-25.7c-41.6-5.9-67.6,27.3-108.5,27.1c-39.2-0.1-51.4-17.1-102.7-17.1c-60.2,0-83.3,27.5-126.7,14.4C1112.8,13.9,1090,1.6,1041,15.9c-50.6,14.8-106,6.9-155.1-7c-93.8-26.5-153,18-244.5,19.9C562,30.4,479-7.4,396.9,13c-86.5,21.5-137,29.2-225.1,5.4C106.3,0.7,58.7-12.7,0.5,23.8v29h1920V23.8z;M1920.5,26.1c-55.6,14.7-95.5,18.5-149,2c-49.9-15.4-65.8-6.4-116.1,4.7c-52.3,11.6-85.9-24.9-134-31.7c-41.2-5.9-67.6,35.3-108.5,35.1c-39.2-0.1-48.4-19.1-99.7-19.1c-60.2,0-89.3,24.5-132.7,11.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-111,2.9-160.1-11c-93.8-26.5-143,15-234.5,16.9C582,29.7,495-8.1,412.9,12.3c-86.5,21.5-133,35.2-221.1,11.4C126.3,6,58.7-10.4,0.5,26.1v29h1920V26.1z;M1920.5,28.1c-55.6,14.7-90.5,16.5-144,0c-49.9-15.4-70.8-6.4-121.1,4.7c-52.3,11.6-73.9-24.9-122-31.7c-41.2-5.9-69.6,35.3-110.5,35.1c-39.2-0.1-48.4-18.1-99.7-18.1c-60.2,0-89.3,23.5-132.7,10.4c-50.7-15.3-75.5-20.6-124.5-6.3c-50.6,14.8-91,5.9-140.1-8c-93.8-26.5-163,15-254.5,16.9C592,32.7,525-7.1,442.9,13.3c-86.5,21.5-151,26.2-239.1,2.4C138.3-2,58.7-8.4,0.5,28.1v29h1920V28.1z;"
+        ></animate>
+      </path>
+    </svg>
+
+    <div class="leaf5">
+      <img src="images/img8.svg" alt="" class="leaf5__left" />
+      <img src="images/img9.svg" alt="" class="leaf5__right" />
+    </div>
+
+    <div class="leaf4">
+      <img src="images/img10.svg" alt="" class="leaf4__left" />
+      <img src="images/img10.svg" alt="" class="leaf4__right" />
+    </div>
+
+    <footer class="footer bg-blue5">
+      <div class="footer__inner">
+        <a href="#" class="footer__logo"><img src="./images/logo.svg" alt="学校法人 日本教育財団 ハル幼稚園" /></a>
+        <div class="footer__decs">
+          <div class="footer__info">
+            <p class="footer__tel">03-3344-1010</p>
+            <p class="footer__address">〒160-0023 <br />東京都新宿区西新宿１丁目７−３</p>
+          </div>
+          <ul class="footer__list">
+            <li class="footer__item"><a href="index.html">ホーム</a></li>
+            <li class="footer__item"><a href="#i-1">園について</a></li>
+            <li class="footer__item"><a href="#i-2">お知らせ</a></li>
+            <li class="footer__item"><a href="">今日の幼稚園</a></li>
+            <li class="footer__item"><a href="#i-2">ニュース</a></li>
+            <li class="footer__item"><a href="#i-3">園の生活</a></li>
+            <li class="footer__item"><a href="#i-4">園の教育</a></li>
+            <li class="footer__item"><a href="">展覧会作品</a></li>
+          </ul>
+        </div>
+      </div>
+      <small class="footer__copy">&copy;2017 Hal Nursery All Rights Reserved.</small>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      let slider1 = new Swiper("#slider1", {
+        loop: true,
+        speed: 1000,
+        effect: "fade",
+        autoplay: {
+          delay: 5000,
+        },
+      });
+
+      let slider = new Swiper(".gallery-slider", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 4, //スライドの枚数と同じ値を指定
+        speed: 1000,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      });
+
+      let thumbs = new Swiper(".gallery-thumbs", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        slideToClickedSlide: true,
+      });
+
+      slider.controller.control = thumbs;
+      thumbs.controller.control = slider;
+    </script>
+  </body>
+</html>

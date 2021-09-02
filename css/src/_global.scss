@@ -1,0 +1,326 @@
+$pc_min_width: 100rem;
+$sp_break_point: 480px;
+$iphone_x_break_point: 375px;
+
+$color_black: #333;
+$color_white: #fff;
+$color_pink: #e45560;
+$color_blue: #01a5b6;
+$color_blue2: #0b76bd;
+$color_blue3: #cdf5fc;
+$color_blue4: #9ae3f0;
+$color_blue5: #78d3fd;
+$color_blue6: #53bef0;
+$color_blue7: #229dd6;
+$color_blue8: #1078a8;
+$color_blue9: #1f78c2;
+$color_blue10: #eaffff;
+$color_blue11: #0f578e;
+$color_red: #d22e0f;
+$color_green: #039b58;
+$color_orange: #fb4e1d;
+$color_orange2: #fff9f4;
+$color_yellow: #ffb50d;
+$color_brown: #e1b073;
+
+@font-face {
+  font-family: "MPLUSRounded1c";
+  src: url(../fonts/MPLUSRounded1c-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Noto-Sans-JP";
+  src: url(../fonts/NotoSansJP-Regular.otf);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Noto-Sans-JP";
+  scroll-behavior: smooth;
+}
+@media screen and(max-width: 1000px) {
+  html {
+    font-size: 1vw;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+  color: $color_black;
+}
+body {
+  background: $color_blue10;
+  overflow-x: hidden;
+}
+p,
+a,
+span {
+  font-size: 1.8rem;
+  color: $color_black;
+  @media screen and(max-width: $sp_break_point) {
+    font-size: 16px;
+  }
+}
+
+p {
+  padding: 1.5rem 0;
+  @media screen and(max-width: $iphone_x_break_point) {
+    font-size: 4rem;
+  }
+}
+
+.font {
+  &-red {
+    color: $color_red;
+  }
+  &-blue {
+    color: $color_blue;
+  }
+  &-orange {
+    color: $color_orange;
+  }
+  &-green {
+    color: $color_green;
+  }
+  &-pink {
+    color: $color_pink;
+  }
+}
+.bg {
+  &-red {
+    background-color: $color_red;
+  }
+  &-blue {
+    background-color: $color_blue;
+  }
+  &-orange {
+    background-color: $color_orange;
+  }
+  &-green {
+    background-color: $color_green;
+  }
+  &-pink {
+    background-color: $color_pink;
+  }
+}
+
+@for $i from 1 through 10 {
+  .mt-#{$i}0 {
+    margin-top: #{$i}rem;
+  }
+  .mb-#{$i}0 {
+    margin-bottom: #{$i}rem;
+  }
+  .ml-#{$i}0 {
+    margin-left: #{$i}rem;
+  }
+  .mr-#{$i}0 {
+    margin-right: #{$i}rem;
+  }
+}
+
+.mg-0 {
+  margin: 0;
+}
+
+.mlr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.maxw-80 {
+  max-width: 80rem;
+}
+
+.sp-br {
+  display: none;
+}
+
+.bg-cover {
+  background-size: cover !important;
+}
+.z-idx-0 {
+  z-index: 0 !important;
+}
+
+.w-80 {
+  width: 80rem;
+  margin: 0 auto;
+}
+
+.font-yellow {
+  color: $color_yellow;
+}
+
+.bg-blue1 {
+  background-color: $color_blue3;
+}
+.bg-blue2 {
+  background-color: $color_blue4;
+}
+.bg-blue3 {
+  background-color: $color_blue6;
+}
+.bg-blue4 {
+  background-color: $color_blue7;
+}
+.bg-blue5 {
+  background-color: $color_blue8;
+}
+
+@media screen and(max-width:$iphone_x_break_point) {
+  .sp-br {
+    display: block;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: translate(-70%, -40%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-70%, -40%) rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(0, 100%) rotate(180deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, -100%) rotate(180deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes shake2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, 10%) rotate(30deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes shake3 {
+  0% {
+    transform: translate(30%, 0) rotate(-15deg);
+  }
+  25% {
+    transform: translate(0, 20%);
+  }
+  50% {
+    transform: translate(-30%, 0) rotate(15deg);
+  }
+  75% {
+    transform: translate(0, 20%);
+  }
+  100% {
+    transform: translate(30%, 0) rotate(-15deg);
+  }
+}
+
+@keyframes shake4 {
+  0% {
+    transform: translate(-20%, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, -20%) rotate(-15deg);
+  }
+  100% {
+    transform: translate(-20%, 0) rotate(0deg);
+  }
+}
+
+@keyframes shake5 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-20%, 10%) rotate(-20deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(40%, 13%) rotate(0);
+  }
+  45% {
+    transform: translate(40%, 13%) rotate(0);
+  }
+  50% {
+    transform: translate(40%, -10%) rotate(0);
+  }
+  55% {
+    transform: translate(40%, 13%) rotate(0);
+  }
+  60% {
+    transform: translate(40%, -10%) rotate(0);
+  }
+  65% {
+    transform: translate(40%, 13%) rotate(0);
+  }
+  100% {
+    transform: translate(40%, 13%) rotate(0);
+  }
+}
+
+@keyframes jump2 {
+  0% {
+    transform: translate(0, -100%) rotate(0);
+  }
+  45% {
+    transform: translate(0, -100%) rotate(0);
+  }
+  50% {
+    transform: translate(0, -120%) rotate(0);
+  }
+  55% {
+    transform: translate(0, -100%) rotate(0);
+  }
+  60% {
+    transform: translate(0, -120%) rotate(0);
+  }
+  65% {
+    transform: translate(0, -100%) rotate(0);
+  }
+  100% {
+    transform: translate(0, -100%) rotate(0);
+  }
+}
+
+@keyframes rotation1 {
+  0% {
+    transform: translate(7%, 0) rotate(-20deg);
+  }
+  25% {
+    transform: translate(0, 7%) rotate(-10deg);
+  }
+  50% {
+    transform: translate(7%, 0) rotate(-20deg);
+  }
+  75% {
+    transform: translate(0, 7%) rotate(-10deg);
+  }
+  100% {
+    transform: translate(7%, 0) rotate(-20deg);
+  }
+}
