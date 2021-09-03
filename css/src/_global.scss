@@ -76,6 +76,9 @@ p {
 .mt-80 {
   margin-top: 8rem;
 }
+.mb-20 {
+  margin-bottom: 2rem;
+}
 .bg-blue1 {
   background-color: $color_blue3;
 }
@@ -170,6 +173,21 @@ p {
   }
   100% {
     transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes shake6 {
+  0% {
+    transform: translate(-10%, -35%) rotate(0);
+  }
+  25% {
+    transform: translate(-5%, -30%) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-15%, -40%) rotate(5deg);
+  }
+  100% {
+    transform: translate(-10%, -35%) rotate(0);
   }
 }
 

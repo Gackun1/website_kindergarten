@@ -182,6 +182,11 @@
       }
     }
   }
+  @media screen and(max-width: $sp_break_point) {
+    .ttl-02 {
+      margin-bottom: 4rem;
+    }
+  }
 }
 
 .news,
@@ -696,6 +701,10 @@
         @media screen and (max-width: $sp_break_point) {
           padding-bottom: 19rem;
         }
+        .caption {
+          display: block;
+          margin: 1.5rem 0 0 0;
+        }
       }
       .btn-02 {
         position: absolute;
@@ -866,12 +875,14 @@
     z-index: 1;
     &__item1 {
       position: absolute;
+      z-index: 2;
       left: 15rem;
       top: 0;
       animation: rotation1 ease-in-out 17s infinite;
     }
     &__item2 {
       position: absolute;
+      z-index: 2;
       right: 15rem;
       top: 0;
       animation: rotation1 ease-in-out 12s infinite;
@@ -888,6 +899,9 @@
       }
     }
   }
+  &__deco {
+    @extend .topics-deco;
+  }
 }
 
 .to-top {
@@ -899,6 +913,7 @@
   left: 100%;
   transform: translate(-10%, -35%);
   z-index: 100;
+  animation: shake6 ease-in-out 12s infinite;
   img {
     width: 100%;
     object-fit: contain;
