@@ -622,6 +622,16 @@ p {
   }
 }
 
+.caption {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .caption {
+    font-size: 3.4rem;
+  }
+}
+
 .wave1, .wave2 {
   position: absolute;
   margin: -2px 0 0 0;
@@ -1563,10 +1573,6 @@ p {
   margin-top: 0;
 }
 
-.life .caption {
-  font-size: 1.5rem;
-}
-
 .life .btn2 {
   background-color: #1f78c2;
 }
@@ -1596,9 +1602,6 @@ p {
   .life__txt + .life__txt {
     margin-bottom: 10rem;
     margin-top: 2rem;
-  }
-  .life .caption {
-    font-size: 3.4rem;
   }
   .life__ttl {
     font-size: 9rem;
@@ -1768,6 +1771,31 @@ p {
 .educate__item a:hover .educate__img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.educate__item a {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+.educate__item a p {
+  padding: 0 0 8rem 0;
+  margin-top: -2rem;
+}
+
+@media screen and (max-width: 480px) {
+  .educate__item a p {
+    padding-bottom: 19rem;
+  }
+}
+
+.educate__item a .btn-02 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .educate__imgbox {

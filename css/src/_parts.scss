@@ -121,6 +121,13 @@
   }
 }
 
+.caption {
+  font-size: 1.5rem;
+  @media screen and(max-width: $sp_break_point) {
+    font-size: 3.4rem;
+  }
+}
+
 .wave1 {
   position: absolute;
   margin: -2px 0 0 0;
