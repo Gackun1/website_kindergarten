@@ -60,6 +60,11 @@
     margin: 0 0 3rem 0;
     &__sp-logo {
       display: block;
+      width: 35rem;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
     }
     &-nav {
       flex-wrap: wrap;

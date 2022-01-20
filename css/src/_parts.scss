@@ -1,0 +1,219 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 100vw;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "MPLUSRounded1c";
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: $color_white;
+  transition: all 0.2s;
+  @media screen and(max-width: $sp_break_point) {
+    padding: 2rem 5rem;
+    font-size: 3.5rem;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.btn-02 {
+  @extend .button;
+  background-color: $color_blue7;
+  margin: 2rem auto 0 auto;
+  padding: 1.3rem 3rem 1.3rem 6rem;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(40%, -50%);
+    width: 3rem;
+    height: 3rem;
+    background-image: url(../images/button1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+  }
+  &:hover:after {
+    transform: translate(60%, -50%);
+  }
+  @media screen and(max-width:$sp_break_point) {
+    padding: 2.3rem 6rem 2.3rem 13rem;
+    font-size: 5rem;
+    margin-top: 7rem;
+    &:after {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+}
+
+.btn-03 {
+  @extend .button;
+  background-color: #f49e26;
+  width: 100%;
+  padding: 1.7rem;
+  border-radius: 1rem;
+  font-size: 3rem;
+  @media screen and (max-width: $sp_break_point) {
+    padding: 3.5rem;
+    font-size: 6rem;
+  }
+}
+
+.btn-04 {
+  @extend .btn-03;
+  background: $color_white;
+  color: #f49e26;
+  border: solid 3px #f49e26;
+}
+
+.ttl {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding: 0;
+  font-weight: bold;
+  font-family: "MPLUSRounded1c";
+}
+
+.ttl-01 {
+  @extend .ttl;
+  width: 25rem;
+  height: 15rem;
+  background-image: url(../images/shell1.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  letter-spacing: 0.15rem;
+  white-space: nowrap;
+  span {
+    font-size: 2.5rem;
+    color: $color_white;
+  }
+  @media screen and(max-width: $sp_break_point) {
+    width: 40rem;
+    height: 24rem;
+    span {
+      font-size: 4.8rem;
+    }
+  }
+}
+
+.ttl-02 {
+  @extend .ttl;
+  font-size: 3rem;
+  text-align: left;
+  color: $color_blue11;
+  letter-spacing: 0.2rem;
+  @media screen and(max-width: $sp_break_point) {
+    font-size: 6rem;
+  }
+}
+
+.caption {
+  font-size: 1.5rem;
+  @media screen and(max-width: $sp_break_point) {
+    font-size: 3.4rem;
+  }
+}
+
+.wave1 {
+  position: absolute;
+  margin: -2px 0 0 0;
+  transform: scale(1, -1);
+}
+
+.wave2 {
+  @extend .wave1;
+  transform: translate(0, calc(-100% + 3px));
+  z-index: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.leaf1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  transform: translate(0, -50%);
+  overflow-x: hidden;
+  &__left {
+    width: 30rem;
+    height: 37rem;
+    object-fit: contain;
+  }
+  &__right {
+    width: 23rem;
+    height: 30rem;
+    object-fit: contain;
+  }
+  &__fish {
+    position: absolute;
+    left: 0;
+    bottom: 5rem;
+    width: 30rem;
+    animation: shake4 ease-in-out 15s infinite;
+  }
+}
+
+.leaf2 {
+  @extend .leaf1;
+  &__left {
+    width: 15rem;
+  }
+  &__right {
+    width: 15rem;
+  }
+}
+
+.leaf3 {
+  @extend .leaf1;
+  transform: translate(0, -10%);
+  z-index: 2;
+  &__left {
+    width: 20rem;
+  }
+  &__right {
+    width: 20rem;
+  }
+}
+
+.leaf4 {
+  @extend .leaf1;
+  z-index: 0;
+  transform: translate(0, -100%);
+  &__left {
+    width: 20rem;
+    margin: 0 0 0 10rem;
+  }
+  &__right {
+    width: 20rem;
+    margin: 0 10rem 0 0;
+  }
+}
+
+.leaf5 {
+  @extend .leaf1;
+  transform: translate(0, -80%);
+  &__left {
+    width: 20rem;
+  }
+  &__right {
+    width: 20rem;
+  }
+}

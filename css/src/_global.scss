@@ -1,10 +1,7 @@
 $pc_min_width: 100rem;
 $sp_break_point: 480px;
-$iphone_x_break_point: 375px;
-
 $color_black: #333;
 $color_white: #fff;
-$color_pink: #e45560;
 $color_blue: #01a5b6;
 $color_blue2: #0b76bd;
 $color_blue3: #cdf5fc;
@@ -16,18 +13,12 @@ $color_blue8: #1078a8;
 $color_blue9: #1f78c2;
 $color_blue10: #eaffff;
 $color_blue11: #0f578e;
-$color_red: #d22e0f;
-$color_green: #039b58;
-$color_orange: #fb4e1d;
-$color_orange2: #fff9f4;
-$color_yellow: #ffb50d;
 $color_brown: #e1b073;
 
 @font-face {
   font-family: "MPLUSRounded1c";
   src: url(../fonts/MPLUSRounded1c-Medium.ttf);
 }
-
 @font-face {
   font-family: "Noto-Sans-JP";
   src: url(../fonts/NotoSansJP-Regular.otf);
@@ -52,10 +43,12 @@ html {
   list-style: none;
   color: $color_black;
 }
+
 body {
   background: $color_blue10;
   overflow-x: hidden;
 }
+
 p,
 a,
 span {
@@ -68,94 +61,24 @@ span {
 
 p {
   padding: 1.5rem 0;
-  @media screen and(max-width: $iphone_x_break_point) {
+  line-height: 175%;
+  @media screen and(max-width: $sp_break_point) {
     font-size: 4rem;
-  }
-}
-
-.font {
-  &-red {
-    color: $color_red;
-  }
-  &-blue {
-    color: $color_blue;
-  }
-  &-orange {
-    color: $color_orange;
-  }
-  &-green {
-    color: $color_green;
-  }
-  &-pink {
-    color: $color_pink;
-  }
-}
-.bg {
-  &-red {
-    background-color: $color_red;
-  }
-  &-blue {
-    background-color: $color_blue;
-  }
-  &-orange {
-    background-color: $color_orange;
-  }
-  &-green {
-    background-color: $color_green;
-  }
-  &-pink {
-    background-color: $color_pink;
-  }
-}
-
-@for $i from 1 through 10 {
-  .mt-#{$i}0 {
-    margin-top: #{$i}rem;
-  }
-  .mb-#{$i}0 {
-    margin-bottom: #{$i}rem;
-  }
-  .ml-#{$i}0 {
-    margin-left: #{$i}rem;
-  }
-  .mr-#{$i}0 {
-    margin-right: #{$i}rem;
   }
 }
 
 .mg-0 {
   margin: 0;
 }
-
-.mlr-auto {
-  margin-left: auto;
-  margin-right: auto;
+.mt-60 {
+  margin-top: 6rem;
 }
-
-.maxw-80 {
-  max-width: 80rem;
+.mt-80 {
+  margin-top: 8rem;
 }
-
-.sp-br {
-  display: none;
+.mb-20 {
+  margin-bottom: 2rem;
 }
-
-.bg-cover {
-  background-size: cover !important;
-}
-.z-idx-0 {
-  z-index: 0 !important;
-}
-
-.w-80 {
-  width: 80rem;
-  margin: 0 auto;
-}
-
-.font-yellow {
-  color: $color_yellow;
-}
-
 .bg-blue1 {
   background-color: $color_blue3;
 }
@@ -170,12 +93,6 @@ p {
 }
 .bg-blue5 {
   background-color: $color_blue8;
-}
-
-@media screen and(max-width:$iphone_x_break_point) {
-  .sp-br {
-    display: block;
-  }
 }
 
 @keyframes rotation {
@@ -256,6 +173,21 @@ p {
   }
   100% {
     transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes shake6 {
+  0% {
+    transform: translate(-10%, -35%) rotate(0);
+  }
+  25% {
+    transform: translate(-5%, -30%) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-15%, -40%) rotate(5deg);
+  }
+  100% {
+    transform: translate(-10%, -35%) rotate(0);
   }
 }
 
